@@ -10,6 +10,8 @@ $ eval $(docker-machine env default)  # Refresh your environment settings
 
 $ eb local run
 
+$ visit http://<YOUR_IP> and http://demo.com to see either of the node apps
+
 ### Running remote
 
 $ eb status     # See the remote envs
