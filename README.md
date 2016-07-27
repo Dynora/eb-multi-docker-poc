@@ -1,4 +1,6 @@
-# Running locally
+## AWS Elasticbeanstalk POC running a multidocker environment with nginx
+
+### Running locally
 
 $ docker-machine restart default      # Restart the environment
 
@@ -6,7 +8,7 @@ $ eval $(docker-machine env default)  # Refresh your environment settings
 
 $ eb local run
 
-# Running remote
+### Running remote
 
 $ eb use
 
