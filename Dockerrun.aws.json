@@ -6,6 +6,12 @@
       "host": {
         "sourcePath": "/var/app/current/node-app"
       }
+    },
+    {
+      "name": "nginx-proxy-conf",
+      "host": {
+        "sourcePath": "/var/app/current/proxy/conf.d"
+      }
     }
   ],
   "containerDefinitions": [
@@ -14,12 +20,6 @@
       "image": "node:0.12",
       "essential": true,
       "memory": 128,
-      "portMappings": [
-        {
-          "hostPort": 8000,
-          "containerPort": 8080
-        }
-      ],
       "command": [
         "/bin/bash",
         "/usr/src/app/run.sh"
@@ -36,12 +36,6 @@
       "image": "node:0.12",
       "essential": true,
       "memory": 128,
-      "portMappings": [
-        {
-          "hostPort": 8001,
-          "containerPort": 8090
-        }
-      ],
       "command": [
         "/bin/bash",
         "/usr/src/app/run_another.sh"
@@ -50,6 +44,38 @@
         {
           "sourceVolume": "node-app",
           "containerPath": "/usr/src/app"
+        }
+      ]
+    },
+    {
+      "name": "nginx-proxy",
+      "image": "nginx",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": [
+        "node-app1",
+        "node-app2"
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "node-app",
+          "containerPath": "/usr/src/app",
+          "readOnly": true
+        },
+        {
+          "sourceVolume": "awseb-logs-nginx-proxy",
+          "containerPath": "/var/log/nginx"
+        },
+        {
+          "sourceVolume": "nginx-proxy-conf",
+          "containerPath": "/etc/nginx/conf.d",
+          "readOnly": true
         }
       ]
     }
