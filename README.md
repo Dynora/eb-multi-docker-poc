@@ -10,6 +10,6 @@ $ eb local run
 
 ### Running remote
 
-$ eb use
+$ eb status     # See the remote envs
 
 $ eb deploy
