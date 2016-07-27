@@ -8,5 +8,7 @@ var server = http.createServer(function (request, response) {
   response.end("<script type=\"text/javascript\">document.write('<h3><a href=\"http://' + location.host + ':8080/\">' + 'Tomcat Application on port 8080</a></h3>');</script>");
 });
 
+var port = process.env.npm_package_config_port || 8080;
+
 // Listen on port 8000, IP defaults to 127.0.0.1
-server.listen(8000);
+server.listen(port);

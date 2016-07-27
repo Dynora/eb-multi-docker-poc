@@ -12,3 +12,10 @@ Follow the steps below to deploy this application to an Elastic Beanstalk Multi-
 5. Choose 'Multi-container Docker' in the 'Predefined configuration' dropdown and click `Next`
 6. Upload the ZIP file downloaded in step 1
 7. Review and launch the application
+
+
+# Running locally
+
+$ docker-machine restart default      # Restart the environment
+$ eval $(docker-machine env default)  # Refresh your environment settings
+$ eb local run
