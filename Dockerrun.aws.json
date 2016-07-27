@@ -6,17 +6,11 @@
       "host": {
         "sourcePath": "/var/app/current/node-app"
       }
-    },
-    {
-      "name": "tomcat-app",
-      "host": {
-        "sourcePath": "/var/app/current/tomcat-app"
-      }
     }
   ],
   "containerDefinitions": [
     {
-      "name": "node-app",
+      "name": "node-app1",
       "image": "node:0.12",
       "essential": true,
       "memory": 128,
@@ -38,7 +32,7 @@
       ]
     },
     {
-      "name": "node-app",
+      "name": "node-app2",
       "image": "node:0.12",
       "essential": true,
       "memory": 128,
