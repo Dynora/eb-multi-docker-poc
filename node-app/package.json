@@ -7,8 +7,8 @@
     "node": ">=0.10"
   },
   "config": {
-    "name": "undefined",
-    "port": "8080"
+    "name": "",
+    "port": ""
   },
   "scripts": {
     "start": "node app.js $npm_package_config_port"
