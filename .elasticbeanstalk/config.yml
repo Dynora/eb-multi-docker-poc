@@ -1,6 +1,9 @@
 branch-defaults:
-  master:
+  develop:
     environment: test
+    group_suffix: null
+  master:
+    environment: prod
     group_suffix: null
 global:
   application_name: eb-multi-docker
