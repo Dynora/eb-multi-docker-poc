@@ -8,6 +8,12 @@
       }
     },
     {
+      "name": "uwsgi-app",
+      "host": {
+        "sourcePath": "/var/app/current/uwsgi-app"
+      }
+    },
+    {
       "name": "nginx-proxy-conf",
       "host": {
         "sourcePath": "/var/app/current/proxy/conf.d"
@@ -18,7 +24,7 @@
     {
       "name": "node-app1",
       "image": "node:0.12",
-      "essential": true,
+      "essential": false,
       "memory": 128,
       "command": [
         "/bin/bash",
@@ -34,7 +40,7 @@
     {
       "name": "node-app2",
       "image": "node:0.12",
-      "essential": true,
+      "essential": false,
       "memory": 128,
       "command": [
         "/bin/bash",
@@ -43,6 +49,23 @@
       "mountPoints": [
         {
           "sourceVolume": "node-app",
+          "containerPath": "/usr/src/app"
+        }
+      ]
+    },
+    {
+      "name": "uwsgi-app1",
+      "image": "dynora/trusty-py-postgres95",
+      "build": "uwsgi-app/Dockerfile",
+      "essential": false,
+      "memory": 128,
+      "command": [
+        "/bin/bash",
+        "/usr/src/app/run.sh"
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "uwsgi-app",
           "containerPath": "/usr/src/app"
         }
       ]
@@ -60,7 +83,8 @@
       ],
       "links": [
         "node-app1",
-        "node-app2"
+        "node-app2",
+        "uwsgi-app1"
       ],
       "mountPoints": [
         {
