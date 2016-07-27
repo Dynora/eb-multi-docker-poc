@@ -1,14 +1,20 @@
 // Load the http module to create an http server.
 var http = require('http');
 
+// Define port
+var port = process.env.npm_package_config_port || 8080;
+
+// Define body
+var name = process.env.npm_package_config_name || "app1";
+var body = "<h1>" + name + "</h1>\n";
+
 // Configure our HTTP server to respond with Hello World to all requests.
 var server = http.createServer(function (request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
-  response.write("<h1>Hello World from Node.js app!!!</h1>\n");
-  response.end("<script type=\"text/javascript\">document.write('<h3><a href=\"http://' + location.host + ':8080/\">' + 'Tomcat Application on port 8080</a></h3>');</script>");
+  response.write(body);
+  response.end("");
 });
 
-var port = process.env.npm_package_config_port || 8080;
 
 // Listen on port 8000, IP defaults to 127.0.0.1
 server.listen(port);
