@@ -1,2 +1,4 @@
 .elasticbeanstalk/logs
 .elasticbeanstalk/docker-compose.yml
+*.pid
+*.log
