@@ -1,0 +1,1 @@
+2016/07/27 09:27:52 [warn] 1#1: upstream "node-app" may not have port 8080 in /etc/nginx/conf.d/default.conf:10

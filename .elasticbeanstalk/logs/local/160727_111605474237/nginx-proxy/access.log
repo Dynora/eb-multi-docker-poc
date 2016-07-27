@@ -1,0 +1,6 @@
+192.168.99.1 - - [27/Jul/2016:09:16:09 +0000] "GET / HTTP/1.1" 502 575 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Kitematic/0.10.0 Chrome/45.0.2454.85 Electron/0.35.4 Safari/537.36" "-"
+192.168.99.1 - - [27/Jul/2016:09:16:12 +0000] "GET / HTTP/1.1" 502 575 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Kitematic/0.10.0 Chrome/45.0.2454.85 Electron/0.35.4 Safari/537.36" "-"
+192.168.99.1 - - [27/Jul/2016:09:16:14 +0000] "GET / HTTP/1.1" 502 575 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36" "-"
+192.168.99.1 - - [27/Jul/2016:09:16:14 +0000] "GET /favicon.ico HTTP/1.1" 502 575 "http://192.168.99.100/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36" "-"
+192.168.99.1 - - [27/Jul/2016:09:16:15 +0000] "GET / HTTP/1.1" 502 575 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36" "-"
+192.168.99.1 - - [27/Jul/2016:09:16:15 +0000] "GET /favicon.ico HTTP/1.1" 502 575 "http://192.168.99.100/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36" "-"

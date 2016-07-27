@@ -1,0 +1,11 @@
+branch-defaults:
+  master:
+    environment: test
+    group_suffix: null
+global:
+  application_name: eb-multi-docker
+  default_ec2_keyname: dynora
+  default_platform: Multi-container Docker 1.11.1 (Generic)
+  default_region: eu-west-1
+  profile: null
+  sc: git
