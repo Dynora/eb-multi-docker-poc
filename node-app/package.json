@@ -7,7 +7,7 @@
     "node": ">=0.10"
   },
   "config": {
-    "name": "app1",
+    "name": "undefined",
     "port": "8080"
   },
   "scripts": {
