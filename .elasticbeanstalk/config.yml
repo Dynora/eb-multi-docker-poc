@@ -1,6 +1,6 @@
 branch-defaults:
   develop:
-    environment: test
+    environment: null
     group_suffix: null
   master:
     environment: prod

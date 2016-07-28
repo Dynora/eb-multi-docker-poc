@@ -88,11 +88,6 @@
       ],
       "mountPoints": [
         {
-          "sourceVolume": "node-app",
-          "containerPath": "/usr/src/app",
-          "readOnly": true
-        },
-        {
           "sourceVolume": "awseb-logs-nginx-proxy",
           "containerPath": "/var/log/nginx"
         },
