@@ -14,6 +14,8 @@ $ visit http://YOUR_IP and http://demo.com to see either of the node apps
 
 ### Running remote
 
+$ remove .elasticbeanstalk/config.yml, run eb init
+
 $ eb status     # See the remote envs
 
 $ eb deploy
