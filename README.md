@@ -1,23 +1,27 @@
 ## AWS Elasticbeanstalk Multi Docker POC
 
-### runs two node js containers, one uwsgi container via an nginx container
+### runs two node js containers and a uwsgi container behind an nginx container
 
-#### Running locally
+# extend your /etc/hosts with a fqdn mapped to your network ip
+```
+cat 'YOUR_IP    demo.com' >> /etc/hosts
+```
 
-$ cat 'YOUR_IP    demo.com' >> /etc/hosts     # extends your /etc/hosts with a demo.com mapped to your network ip
+# start the docker machine
+```
+docker-machine start default      
+```
 
-$ docker-machine restart default      # Restart the environment
+# refresh your environment settings
+```
+eval $(docker-machine env default)
+```
 
-$ eval $(docker-machine env default)  # Refresh your environment settings
+# run the eb local command to initiate your eb app
+```
+eb local run
+```
 
-$ eb local run
+# now visit http://YOUR_IP and http://demo.com to see either of the node apps
 
-$ visit http://YOUR_IP and http://demo.com to see either of the node apps
-
-#### Running remote
-
-$ remove .elasticbeanstalk/config.yml, run eb init
-
-$ eb status     # See the remote envs
-
-$ eb deploy
+# to run this remote is beyond the scope of the POC
